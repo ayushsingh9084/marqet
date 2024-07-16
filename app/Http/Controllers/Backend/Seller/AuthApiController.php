@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Backend\Seller;
 
 use App\Http\Controllers\Backend\ApiController;
 use App\Models\MasterModels\Role;

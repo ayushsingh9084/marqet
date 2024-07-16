@@ -20,7 +20,7 @@ class AuthController extends Controller
             return redirect(redirectUser(session('user')->role));
         }
         // dd(Auth::user());
-        return view('auth.login'); // 'home' is the name of the Blade view file
+        return view('auth.seller-login'); // 'home' is the name of the Blade view file
     }
     public function loginRequest(Request $request)
     {

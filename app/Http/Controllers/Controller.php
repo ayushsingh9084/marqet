@@ -35,7 +35,7 @@ class Controller extends BaseController
         $response = Http::withHeaders($headers)
             ->$method($url, $data);
 
-        dd($response);
+        // dd($response);
         return $this->handleApiResponse($response);
     }
 

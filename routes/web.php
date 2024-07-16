@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Frontend\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Frontend\Admin\DashboardController;
+use App\Http\Controllers\Frontend\Seller\SellerController;
 use Illuminate\Support\Facades\Route;
 
 //Admin Routes
@@ -17,6 +18,8 @@ Route::prefix('admin')->group(function () {
     
 });
 
+Route::get('seller-details/{id?}', [SellerController::class, 'index']);
+Route::get('seller-business-details/{id?}', [SellerController::class, 'businessDetails']);
 Route::get('login', [AuthController::class, 'login'])->name('login');
 Route::post('/login/request', [AuthController::class, 'loginRequest'])->name('login/request');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
